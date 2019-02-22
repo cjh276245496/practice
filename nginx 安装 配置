@@ -1,0 +1,19 @@
+##nginx 安装
+1. wget http://nginx.org/download/nginx-1.14.2.tar.gz
+2. tar -zxvf nginx-1.14.2.tar.gz
+3 安装依赖 yum -y install pcre-devel openssl openssl-devel
+
+4. ./configure --prefix=/usr/local/nginx  配置安装位置
+5. make 
+6. make install 
+
+
+##nginx 启动
+
+查看下  ps -ef | grep nginx 
+到安装目录下 cd /usr/local/nginx/sbin/
+检查配置是否正确  ./nginx -t    如果显示 "syntax is ok" 则安装配置成功
+第一次启动 
+/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+./nginx -s reload
+
