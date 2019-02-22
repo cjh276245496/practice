@@ -17,3 +17,23 @@
 /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 ./nginx -s reload
 
+
+nginx 配置:
+  cd /usr/local/nginx 
+  vim  conf/nginx.conf 修改 配置
+  
+  
+   ## 通过配置路径: 代理不同的服务(例如  访问 http://ip/jenkins/   ---> 访问端口为8090 的jenkins服务 )
+    eg:
+       location / {
+
+                 proxy_set_header        Host $host:$server_port;
+                 proxy_set_header        X-Real-IP $remote_addr;
+                 proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                 proxy_set_header        X-Forwarded-Proto $scheme;
+
+                 proxy_pass          http://127.0.0.1:8090;
+                 proxy_read_timeout  90;
+            root   html;
+            index  index.html index.htm;
+        }
