@@ -1,6 +1,18 @@
 ## <a src = "http://redisdoc.com/index.html"> redis 命令</a>
+\\\\
+\\\\
 
-
+五种数据结构
+  1 string 字符串
+  2. hash   可以 hset key 对象 
+  3. set
+  4. list 
+  5. zset    
+  
+  过期时间设置  expire xxx 500
+  
+  快照存储  log存储
+  
 ## redis 安装 
 
 $ wget http://download.redis.io/releases/redis-2.8.17.tar.gz
