@@ -1,0 +1,6 @@
+##jenkins 安装
+直接下载  http://mirrors.jenkins.io/war/latest/jenkins.war  下载 war 包 放入建好的目录
+启动 java -jar jenkins.war  (也可以使用tomcat  服务器启动)
+
+## 使用nginx代理jenkins
+
