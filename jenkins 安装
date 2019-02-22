@@ -2,6 +2,8 @@
 直接下载  http://mirrors.jenkins.io/war/latest/jenkins.war  下载 war 包 放入建好的目录
 启动 java -jar jenkins.war  (也可以使用tomcat  服务器启动)
 
+修改jenkins启动端口 : java -jar jenkins.war --ajp13Port=-1 --httpPort=8089  ..
+
 ## 使用nginx代理jenkins  下面是代理配置:
 server {
     listen 80;
