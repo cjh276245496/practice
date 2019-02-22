@@ -14,4 +14,4 @@
     四  测试
     
 nginx 官方文档 <a>http://www.nginx.cn/doc/   
-       <a src ="https://github.com/cjh276245496/practice/blob/master/nginx%20%E5%AE%89%E8%A3%85%20%E9%85%8D%E7%BD%AE">安装配置 </a>
+       <link src ="https://github.com/cjh276245496/practice/blob/master/nginx%20%E5%AE%89%E8%A3%85%20%E9%85%8D%E7%BD%AE">安装配置 </a>
