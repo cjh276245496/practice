@@ -1,0 +1,19 @@
+## <a src = "http://redisdoc.com/index.html"> redis 命令</a>
+
+
+## redis 安装 
+
+$ wget http://download.redis.io/releases/redis-2.8.17.tar.gz
+$ tar xzf redis-2.8.17.tar.gz
+$ cd redis-2.8.17
+$ make
+
+## redis  配置
+    
+    后台运行
+　　vim /usr/local/redis/etc/redis.conf
+　　将daemonize的值改为yes  
+  
+   集群  
+   
+   等等
