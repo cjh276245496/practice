@@ -13,3 +13,4 @@
     三  编写项目 自动部署.sh 脚本
     四  测试
     
+nginx 官方文档 <a>http://www.nginx.cn/doc/
