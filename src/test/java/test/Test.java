@@ -1,5 +1,8 @@
 package test;
 
+import com.ofzc.modules.tst.entity.User;
+
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
