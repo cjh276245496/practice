@@ -4,13 +4,13 @@
 
 - <em>解压安装</em>  `tar -zxvf apache-maven-3.6.0-bin.tar.gz `           
 
-  		  `mv apache-maven-3.6.0 /usr/local/maven3  ` 
+  		  `mv apache-maven-3.6.0 /usr/local/maven3 ` 
 
 - <em>环境配置</em>   ` vim /etc/profile` 
 
                    `export M2_HOME=/usr/local/maven3`
 
-  		` export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin`
+  		`export PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin`
 
 - <em>重载配置文件</em>  `source /etc/profile`
 
