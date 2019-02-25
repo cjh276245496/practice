@@ -1,8 +1,0 @@
-
-netstat –apn  查看所有的进程和端口使用情况 
-
-netstat –apn | grep 8080  查看8080 端口的进程
-
-ps -aux | grep java  -aux 显示所有状态 查看java 进程状态
-
-kill -9 [PID]  杀死PID  对应的进程 
