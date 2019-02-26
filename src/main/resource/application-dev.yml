@@ -1,0 +1,20 @@
+#日志
+logging:
+  level:
+    root:
+    - debug
+    - error
+    - fatal
+    - warn
+    - info
+
+# 数据库
+spring:
+  datasource:
+    username: postgres
+    password: abc@123
+    url: jdbc:postgresql://192.168.11.238:5432/car_dealer_bang
+    driver-class-name: org.postgresql.Driver
+  output:
+    ansi:
+      enabled: always

@@ -1,34 +1,12 @@
-
-# 端口
-server:
-  port: 8080
-
+spring:
+  profiles:
+    active: #spring.profiles.active#
+    mvc: throw-exception-if-no-handler-found:true
+    resources: add-mappings=false
 
 mybatis:
   type-aliases-package: modules/entity/**
   mapper-locations: mapper/*.xml
 
-
-logging:
-  level:
-    root:
-    - debug
-    - error
-    - fatal
-    - warn
-    - info
-
-
-# 数据库
-spring:
-  datasource:
-    username: postgres
-    password: abc@123
-    url: jdbc:postgresql://192.168.11.238:5432/car_dealer_bang
-    driver-class-name: org.postgresql.Driver
-  output:
-    ansi:
-      enabled: always
-
 swagger:
-  version: 2.8.0
+    version: 2.8.0

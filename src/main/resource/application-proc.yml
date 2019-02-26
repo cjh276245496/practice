@@ -1,0 +1,18 @@
+# 日志
+logging:
+  level:
+    root:
+    - error
+
+# 数据库
+spring:
+  datasource:
+    username: postgres
+    password: abc@123
+    url: jdbc:postgresql://119.23.187.225:5432/postgres
+    driver-class-name: org.postgresql.Driver
+  output:
+    ansi:
+      enabled: always
+
+
