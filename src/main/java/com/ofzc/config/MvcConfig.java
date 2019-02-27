@@ -24,7 +24,7 @@ import static com.google.common.collect.Lists.newArrayList;
  * @Author: cjh27
  * @Date: 2019/2/14
  */
-//@Profile({"dev", "fix", "test"})
+@Profile({"dev", "fix", "proc"})
 @Configuration
 @EnableSwagger2
 public class MvcConfig implements WebMvcConfigurer {

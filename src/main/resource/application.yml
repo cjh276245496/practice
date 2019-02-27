@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: @spring.profiles.active@
+    active: proc
     mvc: throw-exception-if-no-handler-found:true
     resources: add-mappings=false
 
@@ -11,3 +11,5 @@ mybatis:
   type-aliases-package: modules/entity/**
   mapper-locations: mapper/*.xml
 
+swagger:
+    version: 2.8.0
