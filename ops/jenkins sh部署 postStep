@@ -1,0 +1,49 @@
+#!/bin/bash
+
+echo "practice 项目启动 ..."
+
+export BUILD_ID=dontKillMe
+
+app_path=/usr/local/app/practice
+
+jar_path=/root/.jenkins/workspace/practice/target
+
+jar_name=practice.jar
+
+# 读取项之前的pid
+
+pid=$(cat /usr/local/app/practice-api.pid)
+
+
+# 如何 不存在 /usr/local/app/practice 目录 则创建一个
+
+if [ ! -d $app_path ]; then
+  mkdir   $app_path
+  echo " ${app_path} done"
+else
+  echo dir exist
+fi
+
+
+# 拷贝workspace中jar包;到项目文件目录
+
+cd ${jar_path}
+
+cp ${jar_path}/${jar_name}  ${app_path}
+
+cd ${app_path}
+
+
+
+# kill 原来可能启动的项目
+
+kill -9 ${pid}
+
+
+
+# 启动springboot jar 项目 -Dspring.profiles.active
+
+java -jar ${jar_name} --spring.profiles.active=prod &
+
+
+echo $! > /usr/local/app/practice-api.pid
