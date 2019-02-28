@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
+
 /**
  * @Author: cjh27
  * @Date: 2019/2/14
@@ -25,9 +27,10 @@ public class DemoController {
             "2. kkkkk       \n" +
             "3. lllll       \n" +
             "4. ooooo       \n")
-    public  void  hello(){
+    public  String  hello(){
 
         //LOGGER.warn();
 
+        return String.valueOf("test:"+new Random().nextInt(100));
     }
 }
