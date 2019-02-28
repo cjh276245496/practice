@@ -5,6 +5,8 @@ spring:
     resources: add-mappings=false
 server:
   port: 8091
+  servlet:
+    context-path: /
 
 mybatis:
   type-aliases-package: modules/entity/**
