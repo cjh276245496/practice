@@ -24,10 +24,14 @@
         <resource.delimiter>@</resource.delimiter>
     </properties>
 
-
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -113,7 +117,6 @@
             <scope>test</scope>
         </dependency>
 
-
         <!--  kafka -->
         <!--        <dependency>
                     <groupId>org.springframework.kafka</groupId>
@@ -126,33 +129,10 @@
                     <artifactId>spring-security-test</artifactId>
                     <scope>test</scope>
                 </dependency>-->
-
     </dependencies>
 
     <build>
         <finalName>practice</finalName>
-<!--        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <excludes>
-                    <exclude>**/*.yml</exclude>
-                </excludes>
-            </resource>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-
-            <resource>
-                <directory>
-                    src/main/resources
-
-                </directory>
-            </resource>
-        </resources>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
