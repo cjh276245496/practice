@@ -7,7 +7,6 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.2.RELEASE</version>
         <relativePath/>
-        <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ofzc</groupId>
     <artifactId>practice</artifactId>
@@ -17,15 +16,51 @@
     <description>practice project for Spring Boot</description>
 
     <properties>
+
+        <!--  jdk 和 maven language  -->
         <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.locales>zh_CN</project.build.locales>
+
+        <!--  需要引入的 jar  -->
         <springfox.swagger2.version>2.8.0</springfox.swagger2.version>
         <springfox.swagger.ui.version>2.8.0</springfox.swagger.ui.version>
         <fastjson.version>1.2.47</fastjson.version>
         <resource.delimiter>@</resource.delimiter>
+        <weixin-java-pay.version>3.3.0</weixin-java-pay.version>
     </properties>
 
     <dependencies>
 
+        <!--阿里 FastJson依赖-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <!--  微信支付 -->
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-pay</artifactId>
+            <version>${weixin-java-pay.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jodd</groupId>
+            <artifactId>jodd-http</artifactId>
+            <version>3.9.1</version>
+        </dependency>
+        <!--  lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- mybatis -plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
@@ -36,6 +71,12 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>4.4.5</version>
+        </dependency>
+
+        <!-- redis template  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <!--
@@ -49,6 +90,7 @@
                    <artifactId>spring-boot-starter-security</artifactId>
                </dependency>
        -->
+
         <!--        <dependency>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -70,23 +112,18 @@
             <version>2.0.0</version>
         </dependency>
 
-        <!--   swagger  -->
+        <!--   swagger ui -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${springfox.swagger2.version}</version>
         </dependency>
+
+        <!--  fox -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${springfox.swagger.ui.version}</version>
-        </dependency>
-
-        <!--阿里 FastJson依赖-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${fastjson.version}</version>
         </dependency>
         <!--
                 <dependency>
@@ -100,12 +137,6 @@
                     <groupId>org.springframework.kafka</groupId>
                     <artifactId>spring-kafka</artifactId>
                 </dependency>-->
-
-        <!--     <dependency>
-                 <groupId>org.springframework.session</groupId>
-                 <artifactId>spring-session-data-redis</artifactId>
-             </dependency>
-     -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -116,19 +147,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!--  kafka -->
-        <!--        <dependency>
-                    <groupId>org.springframework.kafka</groupId>
-                    <artifactId>spring-kafka-test</artifactId>
-                    <scope>test</scope>
-                </dependency>-->
-
-        <!--        <dependency>
-                    <groupId>org.springframework.security</groupId>
-                    <artifactId>spring-security-test</artifactId>
-                    <scope>test</scope>
-                </dependency>-->
     </dependencies>
 
     <build>

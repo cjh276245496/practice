@@ -27,13 +27,10 @@ import static com.google.common.collect.Lists.newArrayList;
 @Profile({"dev", "fix", "prod"})
 @Configuration
 @EnableSwagger2
-public class MvcConfig implements WebMvcConfigurer {
+public class SwaggerMvcConfig implements WebMvcConfigurer {
 
     @Value("${swagger.version}")
     private String version;
-
-//    @Autowired
-//    private TypeResolver typeResolver;
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -46,20 +43,27 @@ public class MvcConfig implements WebMvcConfigurer {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select().apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class)/*RequestHandlerSelectors.basePackage("com.ofzc.modules")*/)
+                .select()
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))   /*RequestHandlerSelectors.basePackage("com.ofzc.modules")*/
                 .paths(PathSelectors.any()).build()
                 .apiInfo(apiInfo());
     }
 
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("构建RESTful APIs").description("更多请关注：http://my.csdn.net/elvishehai")
+        return new ApiInfoBuilder().title("构建RESTful APIs")
+                .description("更多请关注：http://my.csdn.net/elvishehai")
                 .license("The Apache License, Version 2.0")
-                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html").termsOfServiceUrl("http://my.csdn.net/elvishehai")
+                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
+                .termsOfServiceUrl("http://my.csdn.net/elvishehai")
                 .version(version).build();
     }
 
 
+    /**
+     *  api文档 token 保存功能
+     * @return
+     */
     private List<ApiKey> security() {
         return newArrayList(
                 new ApiKey("token", "token", "header")

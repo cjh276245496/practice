@@ -10,7 +10,9 @@ server:
 
 mybatis:
   type-aliases-package: modules/entity/**
-  mapper-locations: mapper/*.xml
+  mapper-locations: dao/*.xml
 
 swagger:
     version: 2.8.0
+
+
