@@ -13,4 +13,11 @@
     三  编写项目 自动部署.sh 脚本
     四  测试
     
-nginx 官方文档 <a>http://www.nginx.cn/doc/   
+nginx 官方文档 <a>http://www.nginx.cn/doc/  
+    
+    
+ ## 功能点: 
+    1. 微信支付集成 
+    2. 企业退款 (到零钱 , 到银行卡)集成
+    3. 用户为例  实现restful api
+    4. 待续  ....
