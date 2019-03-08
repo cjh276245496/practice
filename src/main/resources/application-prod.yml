@@ -19,7 +19,7 @@ wx:
 spring:
   datasource:
     username: postgres
-    password: abc@123
+    password: postgres
     url: jdbc:postgresql://119.23.187.225:5432/postgres
     driver-class-name: org.postgresql.Driver
   output:

@@ -31,9 +31,25 @@
         <fastjson.version>1.2.47</fastjson.version>
         <resource.delimiter>@</resource.delimiter>
         <weixin-java-pay.version>3.3.0</weixin-java-pay.version>
+        <rocketmq-client.version>4.3.0</rocketmq-client.version>
+        <rocketmq-common.version>4.3.0</rocketmq-common.version>
     </properties>
 
     <dependencies>
+
+
+        <!--  rocketmq -->
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>${rocketmq-client.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-common</artifactId>
+            <version>${rocketmq-common.version}</version>
+        </dependency>
 
         <!--阿里 FastJson依赖-->
         <dependency>

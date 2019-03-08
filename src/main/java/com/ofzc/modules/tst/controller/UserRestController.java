@@ -11,15 +11,14 @@ import org.springframework.web.bind.annotation.*;
  * @Date: 2019/3/6
  */
 @RestController
-//@RequestMapping
-@Api(tags = "用户restful api")
+@RequestMapping
+@Api(tags = "用户Restful Api")
 public class UserRestController {
 
     /*
-     *
      *   写 restful 风格的 crud api
      * */
-    
+
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ApiOperation(value = "新增用户")
     public Result addUser(@RequestBody User user) {
@@ -58,10 +57,9 @@ public class UserRestController {
     @ApiOperation(value = "查询用户列表分页")
     public Result queryUser() {
 
+        //MP 自动分页
 
         return null;
     }
-
-
 
 }
