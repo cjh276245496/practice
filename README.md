@@ -4,7 +4,7 @@
 
 
 ### 环境准备: 
-    ecs 云服务器一台 </t>  github practice 免费代码仓库 
+    ecs 云服务器  github practice 免费代码仓库 
    需要安装配置的软件: jdk1.8  redis  maven jenkins  git  pgsql    nginx服务器  前端node.js vue webpack 等
 
 ###    步骤
