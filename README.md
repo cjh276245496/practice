@@ -4,7 +4,7 @@
 
 
 ### 环境准备: 
-    ecs 云服务器   github practice  费代码仓库 
+    ecs 云服务器一台 </t>  github practice 免费代码仓库 
    需要安装配置的软件: jdk1.8  redis  maven jenkins  git  pgsql    nginx服务器  前端node.js vue webpack 等
 
 ###    步骤
@@ -12,8 +12,7 @@
     二  项目搭建
     三  编写项目 自动部署.sh 脚本
     四  测试
-    
-
+   
  ## 功能点: 
     1. 微信支付集成 
     2. 企业退款 (到零钱 , 到银行卡)集成
