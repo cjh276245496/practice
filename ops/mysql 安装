@@ -1,0 +1,32 @@
+一   记录在centos 7 下安装mysql 的操作  yum 安装方式
+
+    1. rpm -qa | grep mysql   查看系统是否安装了 mysql  
+    2. 如果安装了mysql  直接 rpm -qa|grep mysql  rpm -e --nodeps 卸载 
+    3. 下载又源文件  wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+    
+    4.安装mysql-community-release-el7-5.noarch.rpm包  rpm -ivh mysql-community-release-el7-5.noarch.rpm
+    5. 列出安装包 yum repolist all | grep mysql   安装yum install mysql-server
+    
+    6.启动 mysql 服务 。
+        systemctl start mysqld.service #启动 mysql
+        systemctl restart mysqld.service #重启 mysql
+        systemctl stop mysqld.service #停止 mysql
+        systemctl enable mysqld.service #设置 mysql 开机启动
+        
+     7.设置密码 mysql5.6 安装完成后，它的 root 用户的密码默认是空的，
+     我们需要及时用 mysql 的 root 用户登录（第一次直接回车，不用输入密码），并修改密码。
+      =====》  (出现一个意外  第一次登陆不上去怎么办  )
+            解决方法： vim /etc/my.cnf
+                      在[mysqld]  下面添加一行 skip-grant-tables
+                      重启mysql 即可
+      《======
+
+      8. 设置密码 
+        mysql> use mysql;
+        mysql> update user set password=PASSWORD("这里输入root用户密码") where User='root';
+        mysql> flush privileges; 
+        mysql> GRANT ALL PRIVILEGES ON *.* TO 'your username'@'%' IDENTIFIED BY 'your password';
+        
+        
+        
+     =========================================  哦耶  搞定   ==========================================
