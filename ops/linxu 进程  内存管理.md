@@ -9,6 +9,7 @@
 
 - kill -9 [PID]  杀死PID  对应的进程 
 
+- netstat -tunpl | grep 27017
 
 进程后台启动   `nohup java -jar xx.jar (xx.war) &`
 
