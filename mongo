@@ -1,7 +1,11 @@
 1. 安装
   https://docs.mongodb.com/manual/tutorial/install-mongodb-enterprise-on-red-hat/#packages
 2. 启动
-    mongod &
+    mongod --config /etc/mongodb.conf
+    
+    注意要注释：mongodb.conf 的 bind_ip
+    
+    参考链接：   https://www.cnblogs.com/zhoujinyi/p/3130231.html
 3. 配置初始化用户名密码
   
     use admin  -- 使用admin内置数据库
